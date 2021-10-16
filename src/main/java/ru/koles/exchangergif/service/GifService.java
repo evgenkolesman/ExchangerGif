@@ -18,8 +18,8 @@ public class GifService {
 
     private final DownloadFeign downloadFeign;
 
-    public ResponseEntity<byte[]> getGif(String currency){
-        String gif = gifFeign.getGif(currency);
+    public ResponseEntity<byte[]> getGif(String value){
+        String gif = gifFeign.getGif(value);
         return downloadFeign.getGifByUrl(getRandomGif(gif));
     }
 
@@ -29,5 +29,4 @@ public class GifService {
         return URI.create(gifJson.getJSONObject((int)(Math.random()*(gifJson.length()))).getJSONObject("images")
                 .getJSONObject("original").getString("webp"));
     }
-
 }

@@ -4,10 +4,10 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-@FeignClient(value = "giphyClient", url = "${giphy.url}")
+@FeignClient(value = "gifClient", url = "${gif.url}")
 public interface GifFeign {
 
-    @GetMapping(path = "${giphy.request}")
+    @GetMapping(path = "${gif.request}")
     String getGif(@PathVariable String search);
 
 }
