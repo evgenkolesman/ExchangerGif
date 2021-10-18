@@ -6,7 +6,6 @@ plugins {
 
 group = 'ru.koles'
 version = '0.1.0'
-sourceCompatibility = 11
 
 repositories {
     mavenCentral()
@@ -14,7 +13,6 @@ repositories {
 
 dependencies {
     implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-openfeign', version: '3.0.4'
-    implementation group: 'org.springframework.boot', name: 'spring-boot-starter', version: '2.5.5'
     implementation 'org.springframework.boot:spring-boot-starter-web:2.5.5'
     compileOnly 'org.projectlombok:lombok:1.18.22'
     annotationProcessor 'org.projectlombok:lombok:1.18.22'

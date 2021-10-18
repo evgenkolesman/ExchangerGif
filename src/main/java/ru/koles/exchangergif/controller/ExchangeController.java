@@ -8,6 +8,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import ru.koles.exchangergif.service.ExchangeService;
 
+/**
+ * Наш основной контроллер
+ * делает Get запрос
+ *
+ * @author Evgeniy Kolesnikov
+ * telegram 89616927595
+ * email evgeniysanich@mail.ru
+ */
+
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/exchanger")
@@ -16,7 +25,7 @@ public class ExchangeController {
     private final ExchangeService service;
 
     @GetMapping("/gif")
-    public ResponseEntity<byte[]> getGif(@RequestParam(defaultValue = "EUR") String currency){
+    public ResponseEntity<byte[]> getGif(@RequestParam(defaultValue = "USD") String currency){
         return service.getGif(currency);
     }
 }

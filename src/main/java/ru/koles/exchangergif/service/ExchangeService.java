@@ -9,6 +9,17 @@ import ru.koles.exchangergif.feign.ExchangeFeign;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
+/**
+ * Сервис обработки данных логика
+ * согласно ТЗ
+ * если получаем значение выше, то получаем "rich" gif,
+ * если получаем значение ниже, то получаем "broke" gif
+ *
+ * @author Evgeniy Kolesnikov
+ * telegram 89616927595
+ * email evgeniysanich@mail.ru
+ */
+
 @Service
 @RequiredArgsConstructor
 public class ExchangeService {
