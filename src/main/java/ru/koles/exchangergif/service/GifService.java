@@ -10,6 +10,13 @@ import ru.koles.exchangergif.feign.GifFeign;
 
 import java.net.URI;
 
+/**
+ * Сервис загрузки гифок
+ *
+ * @author Evgeniy Kolesnikov
+ * telegram 89616927595
+ * email evgeniysanich@mail.ru
+ */
 @Service
 @RequiredArgsConstructor
 public class GifService {
