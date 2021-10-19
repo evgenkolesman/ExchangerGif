@@ -2,10 +2,13 @@ plugins {
     id 'org.springframework.boot' version '2.5.5'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
+    id 'com.google.cloud.tools.jib' version '3.1.4'
 }
 
 group = 'ru.koles'
 version = '0.1.0'
+sourceCompatibility = 11
+targetCompatibility = 11
 
 repositories {
     mavenCentral()
@@ -31,3 +34,5 @@ jar {
         attributes 'Main-Class': 'ru.koles.exchangergif.ExchangerGifApplication'
     }
 }
+
+jib.to.image = 'euhenios/exchangergif:1'

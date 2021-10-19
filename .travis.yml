@@ -4,7 +4,7 @@ language: java
 
 # version numbers
 jdk:
-  - openjdk17
+  - openjdk16
 
 sudo: false
 
