@@ -17,6 +17,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 public interface GifFeign {
 
     @GetMapping(path = "${gif.request}")
-    String getGif(@PathVariable String value);
+    String getGif(@PathVariable String search);
 
 }
